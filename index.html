@@ -374,7 +374,7 @@
           <div class="price-main">$7,345</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$590</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Ocean View Suite','$7,345');return false;">Register Interest</a>
+          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Ocean%20View%20Suite%20-%20WCGC%202027" class="room-btn">Register Interest</a>
         </div>
         <div class="room-card featured">
           <div class="room-tier">Premium Suite</div>
@@ -383,7 +383,7 @@
           <div class="price-main">$7,695</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$650</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Ocean Front Suite','$7,695');return false;">Register Interest</a>
+          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Ocean%20Front%20Suite%20-%20WCGC%202027" class="room-btn">Register Interest</a>
         </div>
       </div>
     </div>
@@ -398,7 +398,7 @@
           <div class="price-main">$7,525</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$620</strong> / night</div>
-          <a href="#" class="room-btn outline" onclick="openModal('Towers Deluxe Oceanview Room','$7,525');return false;">Register Interest</a>
+          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Towers%20Deluxe%20Oceanview%20Room%20-%20WCGC%202027" class="room-btn outline">Register Interest</a>
         </div>
         <div class="room-card">
           <div class="room-tier">Towers · Suite</div>
@@ -407,7 +407,7 @@
           <div class="price-main">$8,915</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$835</strong> / night</div>
-          <a href="#" class="room-btn outline" onclick="openModal('Towers Ocean View Suite','$8,915');return false;">Register Interest</a>
+          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Towers%20Ocean%20View%20Suite%20-%20WCGC%202027" class="room-btn outline">Register Interest</a>
         </div>
       </div>
     </div>
@@ -475,6 +475,95 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
 
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 <script>
+  const HS_FORM_STYLES = `
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+    body, .hs-form { font-family: 'DM Sans', sans-serif !important; }
+    .hs-form-field { margin-bottom: 20px !important; }
+    .hs-form-field > label {
+      display: block !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 10px !important;
+      font-weight: 500 !important;
+      letter-spacing: .12em !important;
+      text-transform: uppercase !important;
+      color: #5a5a52 !important;
+      margin-bottom: 7px !important;
+    }
+    .hs-form-required { color: #C9A84C !important; }
+    .hs-input, input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+      width: 100% !important;
+      padding: 12px 16px !important;
+      border: 1px solid #d0cdc8 !important;
+      border-radius: 0 !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 14px !important;
+      font-weight: 300 !important;
+      color: #1a1a18 !important;
+      background: #faf9f7 !important;
+      box-sizing: border-box !important;
+      outline: none !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+      transition: border-color .2s !important;
+    }
+    .hs-input:focus, input:focus, select:focus, textarea:focus {
+      border-color: #1B372F !important;
+      background: #ffffff !important;
+    }
+    textarea { min-height: 100px !important; resize: vertical !important; }
+    .inputs-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+    .inputs-list li { margin-bottom: 8px !important; }
+    .inputs-list label { font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0 !important; text-transform: none !important; color: #1a1a18 !important; display: flex !important; align-items: center !important; gap: 8px !important; cursor: pointer !important; }
+    input[type="checkbox"], input[type="radio"] { width: auto !important; accent-color: #1B372F !important; }
+    .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
+    .hs-error-msgs li label { font-family: 'DM Sans', sans-serif !important; font-size: 11px !important; color: #b94040 !important; text-transform: none !important; letter-spacing: 0 !important; font-weight: 400 !important; }
+    .hs_submit { margin-top: 8px !important; }
+    .hs-button, input[type="submit"] {
+      width: 100% !important;
+      background: #C9A84C !important;
+      color: #142820 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 15px 36px !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 11px !important;
+      font-weight: 500 !important;
+      letter-spacing: .14em !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      transition: background .2s !important;
+    }
+    .hs-button:hover, input[type="submit"]:hover { background: #d4b462 !important; }
+    .submitted-message { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 300 !important; color: #1B372F !important; line-height: 1.7 !important; padding: 24px 0 8px !important; }
+    .legal-consent-container { font-size: 11px !important; color: #5a5a52 !important; line-height: 1.6 !important; }
+    .legal-consent-container label { font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; color: #5a5a52 !important; }
+    fieldset { border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+  `;
+
+  function injectHsStyles() {
+    const container = document.getElementById('hsFormContainer');
+    if (!container) return;
+    const iframe = container.querySelector('iframe');
+    if (iframe && iframe.contentDocument) {
+      const existing = iframe.contentDocument.getElementById('wcgc-hs-styles');
+      if (!existing) {
+        const style = iframe.contentDocument.createElement('style');
+        style.id = 'wcgc-hs-styles';
+        style.textContent = HS_FORM_STYLES;
+        iframe.contentDocument.head.appendChild(style);
+      }
+    } else {
+      // No iframe — form rendered directly into DOM
+      const existing = document.getElementById('wcgc-hs-styles-inline');
+      if (!existing) {
+        const style = document.createElement('style');
+        style.id = 'wcgc-hs-styles-inline';
+        style.textContent = '#hsFormContainer ' + HS_FORM_STYLES.replace(/(\.|#|input|select|textarea|fieldset|body)/g, '#hsFormContainer $1');
+        document.head.appendChild(style);
+      }
+    }
+  }
+
   function loadHubSpotForm() {
     if (window.hbspt) {
       document.getElementById('hsFormContainer').innerHTML = '';
@@ -482,7 +571,10 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
         portalId: "2740562",
         formId: "7a98f03f-813f-4971-b046-065e17068e4f",
         region: "na1",
-        target: "#hsFormContainer"
+        target: "#hsFormContainer",
+        onFormReady: function() {
+          setTimeout(injectHsStyles, 100);
+        }
       });
     } else {
       setTimeout(loadHubSpotForm, 200);
@@ -492,53 +584,96 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
 </script>
 
 <style>
-  /* HubSpot form overrides to match page style */
-  #hsFormContainer .hs-form fieldset { max-width: 100% !important; }
-  #hsFormContainer .hs-form .hs-input {
+  /* HubSpot form overrides — matched to WCGC2027 page style */
+  #hsFormContainer { font-family: 'DM Sans', sans-serif; }
+  #hsFormContainer .hs-form fieldset { max-width: 100% !important; border: none !important; padding: 0 !important; margin: 0 0 4px !important; }
+  #hsFormContainer .hs-form-field { margin-bottom: 20px !important; }
+  #hsFormContainer .hs-form-field > label {
+    display: block !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    letter-spacing: .12em !important;
+    text-transform: uppercase !important;
+    color: #5a5a52 !important;
+    margin-bottom: 7px !important;
+  }
+  #hsFormContainer .hs-form-field > label .hs-form-required { color: #C9A84C !important; }
+  #hsFormContainer .hs-input,
+  #hsFormContainer input[type="text"],
+  #hsFormContainer input[type="email"],
+  #hsFormContainer input[type="tel"],
+  #hsFormContainer input[type="number"],
+  #hsFormContainer select,
+  #hsFormContainer textarea {
     width: 100% !important;
     padding: 12px 16px !important;
     border: 1px solid #d0cdc8 !important;
     border-radius: 0 !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 14px !important;
+    font-weight: 300 !important;
     color: #1a1a18 !important;
-    background: #fff !important;
+    background: #faf9f7 !important;
     box-sizing: border-box !important;
     outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    transition: border-color .2s !important;
   }
-  #hsFormContainer .hs-form .hs-input:focus {
+  #hsFormContainer .hs-input:focus,
+  #hsFormContainer input:focus,
+  #hsFormContainer select:focus,
+  #hsFormContainer textarea:focus {
     border-color: #1B372F !important;
+    background: #fff !important;
   }
-  #hsFormContainer .hs-form label {
+  #hsFormContainer textarea { min-height: 100px !important; resize: vertical !important; }
+  #hsFormContainer .hs-fieldtype-select select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5a52' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-position: right 14px center !important; padding-right: 36px !important; }
+  #hsFormContainer .inputs-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+  #hsFormContainer .inputs-list li { margin-bottom: 8px !important; }
+  #hsFormContainer .inputs-list label { font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0 !important; text-transform: none !important; color: #1a1a18 !important; display: flex !important; align-items: center !important; gap: 8px !important; cursor: pointer !important; }
+  #hsFormContainer .hs-form-checkbox-display input,
+  #hsFormContainer .hs-form-radio-display input { width: auto !important; accent-color: #1B372F !important; }
+  #hsFormContainer .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
+  #hsFormContainer .hs-error-msgs li label {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 11px !important;
-    font-weight: 500 !important;
-    letter-spacing: .08em !important;
-    text-transform: uppercase !important;
-    color: #5a5a52 !important;
-    margin-bottom: 6px !important;
-    display: block !important;
+    color: #b94040 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-weight: 400 !important;
   }
-  #hsFormContainer .hs-form .hs-form-field { margin-bottom: 20px !important; }
-  #hsFormContainer .hs-form .hs-button {
+  #hsFormContainer .hs_submit { margin-top: 8px !important; }
+  #hsFormContainer .hs-button,
+  #hsFormContainer input[type="submit"] {
+    width: 100% !important;
     background: #C9A84C !important;
     color: #142820 !important;
     border: none !important;
-    padding: 14px 36px !important;
+    border-radius: 0 !important;
+    padding: 15px 36px !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 11px !important;
     font-weight: 500 !important;
     letter-spacing: .14em !important;
     text-transform: uppercase !important;
     cursor: pointer !important;
-    border-radius: 0 !important;
-    width: 100% !important;
-    margin-top: 8px !important;
+    transition: background .2s !important;
   }
-  #hsFormContainer .hs-form .hs-button:hover { background: #d4b060 !important; }
-  #hsFormContainer .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 4px 0 0 !important; }
-  #hsFormContainer .hs-error-msgs li label { color: #c0392b !important; font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; }
-  #hsFormContainer .submitted-message { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; color: #1B372F !important; padding: 20px 0 !important; }
+  #hsFormContainer .hs-button:hover,
+  #hsFormContainer input[type="submit"]:hover { background: #d4b462 !important; }
+  #hsFormContainer .submitted-message {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    color: #1B372F !important;
+    line-height: 1.7 !important;
+    padding: 24px 0 8px !important;
+  }
+  #hsFormContainer .hs-richtext { font-size: 13px !important; color: #5a5a52 !important; margin-bottom: 16px !important; line-height: 1.6 !important; }
+  #hsFormContainer .legal-consent-container { font-size: 11px !important; color: #5a5a52 !important; line-height: 1.6 !important; }
+  #hsFormContainer .legal-consent-container .hs-form-booleancheckbox-display label { font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; color: #5a5a52 !important; }
 </style>
 </body>
 </html>
