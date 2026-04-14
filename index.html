@@ -191,6 +191,33 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/2740562.js"></script>
 <!-- End of HubSpot Embed Code -->
+<script>
+  // Load HubSpot forms script, then init all 5 forms
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'https://js.hsforms.net/forms/embed/v2.js';
+    s.charset = 'utf-8';
+    s.type = 'text/javascript';
+    s.onload = function() {
+      var forms = [
+        { id: '#hs-modal-1', formId: '7a98f03f-813f-4971-b046-065e17068e4f' },
+        { id: '#hs-modal-2', formId: 'e533dfb3-46de-4d68-b636-379c9c1e06a0' },
+        { id: '#hs-modal-3', formId: 'd5a0ba9b-0970-4c80-90bb-6b0e3364f90a' },
+        { id: '#hs-modal-4', formId: 'b55eff3a-9c09-4af3-a65b-a34a69c3f440' },
+        { id: '#hs-modal-5', formId: 'fd229946-fe03-4395-b48b-280cfded8600' }
+      ];
+      forms.forEach(function(f) {
+        hbspt.forms.create({
+          portalId: '2740562',
+          formId: f.formId,
+          region: 'na1',
+          target: f.id
+        });
+      });
+    };
+    document.head.appendChild(s);
+  })();
+</script>
 </head>
 <body>
 
@@ -428,16 +455,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-1">
-        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "2740562",
-            formId: "7a98f03f-813f-4971-b046-065e17068e4f",
-            region: "na1"
-          });
-        </script>
-      </div>
+      <div id="hs-modal-1"></div>
     </div>
   </div>
 </div>
@@ -450,16 +468,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-2">
-        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "2740562",
-            formId: "e533dfb3-46de-4d68-b636-379c9c1e06a0",
-            region: "na1"
-          });
-        </script>
-      </div>
+      <div id="hs-modal-2"></div>
     </div>
   </div>
 </div>
@@ -472,16 +481,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-3">
-        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "2740562",
-            formId: "d5a0ba9b-0970-4c80-90bb-6b0e3364f90a",
-            region: "na1"
-          });
-        </script>
-      </div>
+      <div id="hs-modal-3"></div>
     </div>
   </div>
 </div>
@@ -494,16 +494,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-4">
-        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "2740562",
-            formId: "b55eff3a-9c09-4af3-a65b-a34a69c3f440",
-            region: "na1"
-          });
-        </script>
-      </div>
+      <div id="hs-modal-4"></div>
     </div>
   </div>
 </div>
@@ -516,16 +507,7 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-5">
-        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "2740562",
-            formId: "fd229946-fe03-4395-b48b-280cfded8600",
-            region: "na1"
-          });
-        </script>
-      </div>
+      <div id="hs-modal-5"></div>
     </div>
   </div>
 </div>
