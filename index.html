@@ -478,7 +478,7 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
 });
 </script>
 
-<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js" crossorigin="anonymous"></script>
+<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 <script>
   const HS_FORM_STYLES = `
     body, .hs-form { font-family: 'DM Sans', sans-serif !important; }
@@ -569,22 +569,29 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
   }
 
   function loadHubSpotForm(formId) {
-    if (window.hbspt) {
-      document.getElementById('hsFormContainer').innerHTML = '';
-      hbspt.forms.create({
-        portalId: "2740562",
-        formId: formId,
-        region: "na1",
-        target: "#hsFormContainer",
-        onFormReady: function() {
-          setTimeout(injectHsStyles, 100);
-        }
-      });
-    } else {
-      setTimeout(function() { loadHubSpotForm(formId); }, 200);
+    var container = document.getElementById('hsFormContainer');
+    if (!container) return;
+    container.innerHTML = '<p style="font-family:DM Sans,sans-serif;font-size:13px;color:#5a5a52;padding:20px 0;">Loading form…</p>';
+    function tryCreate(attempts) {
+      if (window.hbspt && window.hbspt.forms) {
+        container.innerHTML = '';
+        window.hbspt.forms.create({
+          portalId: "2740562",
+          formId: formId,
+          region: "na1",
+          target: "#hsFormContainer",
+          onFormReady: function() {
+            setTimeout(injectHsStyles, 150);
+          }
+        });
+      } else if (attempts > 0) {
+        setTimeout(function() { tryCreate(attempts - 1); }, 300);
+      } else {
+        container.innerHTML = '<p style="font-family:DM Sans,sans-serif;font-size:13px;color:#5a5a52;padding:20px 0;">Please contact <a href=\"mailto:jamison@golftours.com\">jamison@golftours.com</a> to register your interest.</p>';
+      }
     }
+    tryCreate(20);
   }
-  document.addEventListener('DOMContentLoaded', function() {});
 </script>
 
 <style>
