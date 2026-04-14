@@ -369,7 +369,7 @@
           <div class="price-main">$6,635</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$480</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Deluxe Ocean View Room','$6,635','7a98f03f-813f-4971-b046-065e17068e4f');return false;">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('modal-1');return false;">Register Interest</a>
         </div>
         <div class="room-card">
           <div class="room-tier">Suite</div>
@@ -378,7 +378,7 @@
           <div class="price-main">$7,345</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$590</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Ocean View Suite','$7,345','e533dfb3-46de-4d68-b636-379c9c1e06a0');return false;">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('modal-2');return false;">Register Interest</a>
         </div>
         <div class="room-card featured">
           <div class="room-tier">Premium Suite</div>
@@ -387,7 +387,7 @@
           <div class="price-main">$7,695</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$650</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Ocean Front Suite','$7,695','d5a0ba9b-0970-4c80-90bb-6b0e3364f90a');return false;">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('modal-3');return false;">Register Interest</a>
         </div>
       </div>
     </div>
@@ -402,7 +402,7 @@
           <div class="price-main">$7,525</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$620</strong> / night</div>
-          <a href="#" class="room-btn outline" onclick="openModal('Towers Deluxe Oceanview Room','$7,525','b55eff3a-9c09-4af3-a65b-a34a69c3f440');return false;">Register Interest</a>
+          <a href="#" class="room-btn outline" onclick="openModal('modal-4');return false;">Register Interest</a>
         </div>
         <div class="room-card">
           <div class="room-tier">Towers · Suite</div>
@@ -411,27 +411,80 @@
           <div class="price-main">$8,915</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$835</strong> / night</div>
-          <a href="#" class="room-btn outline" onclick="openModal('Towers Ocean View Suite','$8,915','fd229946-fe03-4395-b48b-280cfded8600');return false;">Register Interest</a>
+          <a href="#" class="room-btn outline" onclick="openModal('modal-5');return false;">Register Interest</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="bookingModal" onclick="closeModalOnOverlay(event)">
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-1" onclick="closeModalOnOverlay(event)">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal()">✕</button>
+    <button class="modal-close" onclick="closeModal('modal-1')">✕</button>
     <div class="modal-header">
       <div class="modal-eyebrow">Register Your Interest</div>
-      <div class="modal-title" id="modalRoomName">Room</div>
+      <div class="modal-title">Deluxe Ocean View Room &mdash; $6,635 per couple</div>
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hsFormContainer"></div>
+      <div id="hs-modal-1"></div>
     </div>
   </div>
 </div>
+<div class="modal-overlay" id="modal-2" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-2')">✕</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Register Your Interest</div>
+      <div class="modal-title">Ocean View Suite &mdash; $7,345 per couple</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
+      <div id="hs-modal-2"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-3" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-3')">✕</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Register Your Interest</div>
+      <div class="modal-title">Ocean Front Suite &mdash; $7,695 per couple</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
+      <div id="hs-modal-3"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-4" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-4')">✕</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Register Your Interest</div>
+      <div class="modal-title">Towers Deluxe Oceanview Room &mdash; $7,525 per couple</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
+      <div id="hs-modal-4"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-5" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-5')">✕</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Register Your Interest</div>
+      <div class="modal-title">Towers Ocean View Suite &mdash; $8,915 per couple</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
+      <div id="hs-modal-5"></div>
+    </div>
+  </div>
+</div>
+
 
 <div class="disclaimer">
   <p>*Prices and availability are subject to change until deposit is paid. Package prices per couple based on double occupancy for 6 nights. All-inclusive terms apply as per Pueblo Bonito Pacifica resort policy. Visit <a href="https://www.golftours.com/en-us/booking-conditions/" target="_blank">golftours.com/en-us/booking-conditions/</a> for full terms and conditions.</p>
@@ -447,20 +500,47 @@
 </footer>
 
 <script>
-function openModal(room, price, formId) {
-  document.getElementById('modalRoomName').textContent = room + ' — ' + price + ' per couple';
-  document.getElementById('bookingModal').classList.add('open');
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
   document.body.style.overflow = 'hidden';
-  loadHubSpotForm(formId);
 }
-function closeModal() {
-  document.getElementById('bookingModal').classList.remove('open');
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
   document.body.style.overflow = '';
 }
 function closeModalOnOverlay(e) {
-  if (e.target === document.getElementById('bookingModal')) closeModal();
+  if (e.target.classList.contains('modal-overlay')) {
+    e.target.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 }
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
+      m.classList.remove('open');
+    });
+    document.body.style.overflow = '';
+  }
+});
+
+// Initialise all HubSpot forms on page load
+var HS_FORMS = [
+  { target: '#hs-modal-1', formId: '7a98f03f-813f-4971-b046-065e17068e4f' },
+  { target: '#hs-modal-2', formId: 'e533dfb3-46de-4d68-b636-379c9c1e06a0' },
+  { target: '#hs-modal-3', formId: 'd5a0ba9b-0970-4c80-90bb-6b0e3364f90a' },
+  { target: '#hs-modal-4', formId: 'b55eff3a-9c09-4af3-a65b-a34a69c3f440' },
+  { target: '#hs-modal-5', formId: 'fd229946-fe03-4395-b48b-280cfded8600' }
+];
+function initHsForms(attempts) {
+  if (window.hbspt && window.hbspt.forms) {
+    HS_FORMS.forEach(function(f) {
+      hbspt.forms.create({ portalId: '2740562', formId: f.formId, region: 'na1', target: f.target });
+    });
+  } else if (attempts > 0) {
+    setTimeout(function() { initHsForms(attempts - 1); }, 400);
+  }
+}
+window.addEventListener('load', function() { initHsForms(25); });
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(el => {
@@ -479,120 +559,6 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
 </script>
 
 <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  const HS_FORM_STYLES = `
-    body, .hs-form { font-family: 'DM Sans', sans-serif !important; }
-    .hs-form-field { margin-bottom: 20px !important; }
-    .hs-form-field > label {
-      display: block !important;
-      font-family: 'DM Sans', sans-serif !important;
-      font-size: 10px !important;
-      font-weight: 500 !important;
-      letter-spacing: .12em !important;
-      text-transform: uppercase !important;
-      color: #5a5a52 !important;
-      margin-bottom: 7px !important;
-    }
-    .hs-form-required { color: #C9A84C !important; }
-    .hs-input:not([type="checkbox"]):not([type="radio"]), input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
-      width: 100% !important;
-      padding: 12px 16px !important;
-      border: 1px solid #d0cdc8 !important;
-      border-radius: 0 !important;
-      font-family: 'DM Sans', sans-serif !important;
-      font-size: 14px !important;
-      font-weight: 300 !important;
-      color: #1a1a18 !important;
-      background: #faf9f7 !important;
-      box-sizing: border-box !important;
-      outline: none !important;
-      -webkit-appearance: none !important;
-      appearance: none !important;
-      transition: border-color .2s !important;
-    }
-    .hs-input:focus, input:focus, select:focus, textarea:focus {
-      border-color: #1B372F !important;
-      background: #ffffff !important;
-    }
-    textarea { min-height: 100px !important; resize: vertical !important; }
-    .inputs-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-    .inputs-list li { margin-bottom: 8px !important; }
-    .inputs-list label { font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0 !important; text-transform: none !important; color: #1a1a18 !important; display: flex !important; align-items: center !important; gap: 8px !important; cursor: pointer !important; }
-    input[type="checkbox"], input[type="radio"] { width: 16px !important; height: 16px !important; min-width: 16px !important; padding: 0 !important; accent-color: #1B372F !important; cursor: pointer !important; }
-    .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
-    .hs-error-msgs li label { font-family: 'DM Sans', sans-serif !important; font-size: 11px !important; color: #b94040 !important; text-transform: none !important; letter-spacing: 0 !important; font-weight: 400 !important; }
-    .hs_submit { margin-top: 8px !important; }
-    .hs-button, input[type="submit"] {
-      width: 100% !important;
-      background: #C9A84C !important;
-      color: #142820 !important;
-      border: none !important;
-      border-radius: 0 !important;
-      padding: 15px 36px !important;
-      font-family: 'DM Sans', sans-serif !important;
-      font-size: 11px !important;
-      font-weight: 500 !important;
-      letter-spacing: .14em !important;
-      text-transform: uppercase !important;
-      cursor: pointer !important;
-      transition: background .2s !important;
-    }
-    .hs-button:hover, input[type="submit"]:hover { background: #d4b462 !important; }
-    .submitted-message { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; font-weight: 300 !important; color: #1B372F !important; line-height: 1.7 !important; padding: 24px 0 8px !important; }
-    .legal-consent-container { font-size: 11px !important; color: #5a5a52 !important; line-height: 1.6 !important; }
-    .legal-consent-container label { font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; color: #5a5a52 !important; }
-    fieldset { border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
-  `;
-
-  function injectHsStyles() {
-    const container = document.getElementById('hsFormContainer');
-    if (!container) return;
-    const iframe = container.querySelector('iframe');
-    if (iframe && iframe.contentDocument) {
-      const existing = iframe.contentDocument.getElementById('wcgc-hs-styles');
-      if (!existing) {
-        const style = iframe.contentDocument.createElement('style');
-        style.id = 'wcgc-hs-styles';
-        style.textContent = HS_FORM_STYLES;
-        iframe.contentDocument.head.appendChild(style);
-      }
-    } else {
-      // No iframe — form rendered directly into DOM
-      const existing = document.getElementById('wcgc-hs-styles-inline');
-      if (!existing) {
-        const style = document.createElement('style');
-        style.id = 'wcgc-hs-styles-inline';
-        style.textContent = '#hsFormContainer ' + HS_FORM_STYLES.replace(/(\.|#|input|select|textarea|fieldset|body)/g, '#hsFormContainer $1');
-        document.head.appendChild(style);
-      }
-    }
-  }
-
-  function loadHubSpotForm(formId) {
-    var container = document.getElementById('hsFormContainer');
-    if (!container) return;
-    container.innerHTML = '<p style="font-family:DM Sans,sans-serif;font-size:13px;color:#5a5a52;padding:20px 0;">Loading form…</p>';
-    function tryCreate(attempts) {
-      if (window.hbspt && window.hbspt.forms) {
-        container.innerHTML = '';
-        window.hbspt.forms.create({
-          portalId: "2740562",
-          formId: formId,
-          region: "na1",
-          target: "#hsFormContainer",
-          onFormReady: function() {
-            setTimeout(injectHsStyles, 150);
-          }
-        });
-      } else if (attempts > 0) {
-        setTimeout(function() { tryCreate(attempts - 1); }, 300);
-      } else {
-        container.innerHTML = '<p style="font-family:DM Sans,sans-serif;font-size:13px;color:#5a5a52;padding:20px 0;">Please contact <a href=\"mailto:jamison@golftours.com\">jamison@golftours.com</a> to register your interest.</p>';
-      }
-    }
-    tryCreate(20);
-  }
-</script>
 
 <style>
   /* HubSpot form overrides — matched to WCGC2027 page style */
