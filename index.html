@@ -365,7 +365,7 @@
           <div class="price-main">$6,635</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$480</strong> / night</div>
-          <a href="#" class="room-btn" onclick="openModal('Deluxe Ocean View Room','$6,635');return false;">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('Deluxe Ocean View Room','$6,635','7a98f03f-813f-4971-b046-065e17068e4f');return false;">Register Interest</a>
         </div>
         <div class="room-card">
           <div class="room-tier">Suite</div>
@@ -374,7 +374,7 @@
           <div class="price-main">$7,345</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$590</strong> / night</div>
-          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Ocean%20View%20Suite%20-%20WCGC%202027" class="room-btn">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('Ocean View Suite','$7,345','e533dfb3-46de-4d68-b636-379c9c1e06a0');return false;">Register Interest</a>
         </div>
         <div class="room-card featured">
           <div class="room-tier">Premium Suite</div>
@@ -383,7 +383,7 @@
           <div class="price-main">$7,695</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$650</strong> / night</div>
-          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Ocean%20Front%20Suite%20-%20WCGC%202027" class="room-btn">Register Interest</a>
+          <a href="#" class="room-btn" onclick="openModal('Ocean Front Suite','$7,695','d5a0ba9b-0970-4c80-90bb-6b0e3364f90a');return false;">Register Interest</a>
         </div>
       </div>
     </div>
@@ -398,7 +398,7 @@
           <div class="price-main">$7,525</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$620</strong> / night</div>
-          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Towers%20Deluxe%20Oceanview%20Room%20-%20WCGC%202027" class="room-btn outline">Register Interest</a>
+          <a href="#" class="room-btn outline" onclick="openModal('Towers Deluxe Oceanview Room','$7,525','b55eff3a-9c09-4af3-a65b-a34a69c3f440');return false;">Register Interest</a>
         </div>
         <div class="room-card">
           <div class="room-tier">Towers · Suite</div>
@@ -407,7 +407,7 @@
           <div class="price-main">$8,915</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$835</strong> / night</div>
-          <a href="mailto:jamison@golftours.com?subject=Enquiry%3A%20Towers%20Ocean%20View%20Suite%20-%20WCGC%202027" class="room-btn outline">Register Interest</a>
+          <a href="#" class="room-btn outline" onclick="openModal('Towers Ocean View Suite','$8,915','fd229946-fe03-4395-b48b-280cfded8600');return false;">Register Interest</a>
         </div>
       </div>
     </div>
@@ -443,10 +443,11 @@
 </footer>
 
 <script>
-function openModal(room, price) {
+function openModal(room, price, formId) {
   document.getElementById('modalRoomName').textContent = room + ' — ' + price + ' per couple';
   document.getElementById('bookingModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  loadHubSpotForm(formId);
 }
 function closeModal() {
   document.getElementById('bookingModal').classList.remove('open');
@@ -564,12 +565,12 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
     }
   }
 
-  function loadHubSpotForm() {
+  function loadHubSpotForm(formId) {
     if (window.hbspt) {
       document.getElementById('hsFormContainer').innerHTML = '';
       hbspt.forms.create({
         portalId: "2740562",
-        formId: "7a98f03f-813f-4971-b046-065e17068e4f",
+        formId: formId,
         region: "na1",
         target: "#hsFormContainer",
         onFormReady: function() {
@@ -577,10 +578,10 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
         }
       });
     } else {
-      setTimeout(loadHubSpotForm, 200);
+      setTimeout(function() { loadHubSpotForm(formId); }, 200);
     }
   }
-  document.addEventListener('DOMContentLoaded', loadHubSpotForm);
+  document.addEventListener('DOMContentLoaded', function() {});
 </script>
 
 <style>
