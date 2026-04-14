@@ -428,7 +428,16 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-1"></div>
+      <div id="hs-modal-1">
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "2740562",
+            formId: "7a98f03f-813f-4971-b046-065e17068e4f",
+            region: "na1"
+          });
+        </script>
+      </div>
     </div>
   </div>
 </div>
@@ -441,7 +450,16 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-2"></div>
+      <div id="hs-modal-2">
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "2740562",
+            formId: "e533dfb3-46de-4d68-b636-379c9c1e06a0",
+            region: "na1"
+          });
+        </script>
+      </div>
     </div>
   </div>
 </div>
@@ -454,7 +472,16 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-3"></div>
+      <div id="hs-modal-3">
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "2740562",
+            formId: "d5a0ba9b-0970-4c80-90bb-6b0e3364f90a",
+            region: "na1"
+          });
+        </script>
+      </div>
     </div>
   </div>
 </div>
@@ -467,7 +494,16 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-4"></div>
+      <div id="hs-modal-4">
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "2740562",
+            formId: "b55eff3a-9c09-4af3-a65b-a34a69c3f440",
+            region: "na1"
+          });
+        </script>
+      </div>
     </div>
   </div>
 </div>
@@ -480,7 +516,16 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <div id="hs-modal-5"></div>
+      <div id="hs-modal-5">
+        <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "2740562",
+            formId: "fd229946-fe03-4395-b48b-280cfded8600",
+            region: "na1"
+          });
+        </script>
+      </div>
     </div>
   </div>
 </div>
@@ -523,24 +568,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Initialise all HubSpot forms on page load
-var HS_FORMS = [
-  { target: '#hs-modal-1', formId: '7a98f03f-813f-4971-b046-065e17068e4f' },
-  { target: '#hs-modal-2', formId: 'e533dfb3-46de-4d68-b636-379c9c1e06a0' },
-  { target: '#hs-modal-3', formId: 'd5a0ba9b-0970-4c80-90bb-6b0e3364f90a' },
-  { target: '#hs-modal-4', formId: 'b55eff3a-9c09-4af3-a65b-a34a69c3f440' },
-  { target: '#hs-modal-5', formId: 'fd229946-fe03-4395-b48b-280cfded8600' }
-];
-function initHsForms(attempts) {
-  if (window.hbspt && window.hbspt.forms) {
-    HS_FORMS.forEach(function(f) {
-      hbspt.forms.create({ portalId: '2740562', formId: f.formId, region: 'na1', target: f.target });
-    });
-  } else if (attempts > 0) {
-    setTimeout(function() { initHsForms(attempts - 1); }, 400);
-  }
-}
-window.addEventListener('load', function() { initHsForms(25); });
+);
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(el => {
@@ -558,7 +586,6 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
 });
 </script>
 
-<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 
 <style>
   /* HubSpot form overrides — matched to WCGC2027 page style */
