@@ -103,7 +103,9 @@
 
   /* HOST */
   .host{background:var(--forest-deep);padding:96px 48px}
-  .host-inner{max-width:800px;margin:0 auto}
+  .host-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .host-divider{width:1px;background:var(--border);display:none}
+  @media(max-width:700px){.host-inner{grid-template-columns:1fr;gap:48px}}
   .host-img-wrap{position:relative}
   .host-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block}
   .host-tag{position:absolute;bottom:0;left:0;background:var(--gold);padding:10px 18px}
@@ -202,7 +204,7 @@
     <p class="hero-sub">Pacifica Golf &amp; Spa Resort · Pueblo Bonito</p>
     <div class="hero-meta">
       <div class="hero-meta-item"><span class="meta-label">Dates</span><span class="meta-value">Jan 30 – Feb 5, 2027</span></div>
-      <div class="hero-meta-item"><span class="meta-label">Duration</span><span class="meta-value">6 Nights</span></div>
+      <div class="hero-meta-item"><span class="meta-label">Duration</span><span class="meta-value">7 Nights</span></div>
       <div class="hero-meta-item"><span class="meta-label">From</span><span class="meta-value">$6,635 per couple</span></div>
       <div class="hero-meta-item"><span class="meta-label">Golf</span><span class="meta-value">54 Competitive Holes</span></div>
     </div>
@@ -253,17 +255,18 @@
     <div class="itinerary-header">
       <div>
         <div class="section-eyebrow">Schedule</div>
-        <h2 class="section-title light">Six Days,<br>Perfectly Planned</h2>
+        <h2 class="section-title light">Seven Days,<br>Perfectly Planned</h2>
       </div>
       <p class="section-body light">54 holes of competitive couples golf across three rounds at Quivira, bracketed by a welcome reception and a closing prize gala on the Pacific. Every morning has purpose. Every evening is yours.</p>
     </div>
     <div class="day-grid">
-      <div class="day-card"><div class="day-number">Day 1 · Jan 30</div><div class="day-title">Arrival &amp; Welcome</div><div class="day-desc">Private airport transfers to Pueblo Bonito Pacifica. Check-in, welcome cocktails, and a casual orientation evening with your host Dan O'Shaughnessy.</div></div>
+      <div class="day-card"><div class="day-number">Day 1 · Jan 30</div><div class="day-title">Arrival &amp; Welcome</div><div class="day-desc">Private airport transfers to Pueblo Bonito Pacifica. Check-in, welcome cocktails, and a casual orientation evening with your hosts Dan O'Shaughnessy and Rose Rismanchi.</div></div>
       <div class="day-card"><div class="day-number">Day 2 · Jan 31</div><div class="day-title">Round One — Quivira</div><div class="day-desc">18 competitive holes at the Nicklaus-designed Quivira Golf Club. Shotgun start, caddies included. Evening at leisure across the resort's restaurants and bars.</div></div>
-      <div class="day-card"><div class="day-number">Day 3 · Feb 1</div><div class="day-title">Resort Day</div><div class="day-desc">A full day to explore the resort. Private beach, spa treatments, pool, watersports — or a practice round. The day is entirely yours.</div></div>
+      <div class="day-card"><div class="day-number">Day 3 · Feb 1</div><div class="day-title">Resort Day</div><div class="day-desc">A full day to explore the resort. Private beach, spa treatments, pool, watersports — or a practice round. Optional whale watching excursion available for those wanting to explore the Pacific.</div></div>
       <div class="day-card"><div class="day-number">Day 4 · Feb 2</div><div class="day-title">Round Two — Quivira</div><div class="day-desc">18 more competitive holes with updated leaderboard reveal. Team format changes introduced for added drama heading into the final round.</div></div>
-      <div class="day-card"><div class="day-number">Day 5 · Feb 3</div><div class="day-title">Final Round &amp; Gala</div><div class="day-desc">The decisive 18 holes at Quivira. Dramatic clifftop finishing holes with the Pacific as your backdrop, followed by the closing prize gala dinner on the beach.</div></div>
-      <div class="day-card"><div class="day-number">Day 6 · Feb 4–5</div><div class="day-title">Awards &amp; Departure</div><div class="day-desc">Prize giving, a final resort morning, and departure transfers. Winners' photos, leaderboard archive, and memories that last considerably longer.</div></div>
+      <div class="day-card"><div class="day-number">Day 5 · Feb 3</div><div class="day-title">Final Round — Quivira</div><div class="day-desc">The decisive 18 holes at Quivira. Dramatic clifftop finishing holes with the Pacific as your backdrop. Leaderboard confirmed. Champions crowned.</div></div>
+      <div class="day-card"><div class="day-number">Day 6 · Feb 4</div><div class="day-title">Closing Gala Dinner</div><div class="day-desc">Prize giving, awards ceremony, and the closing gala dinner on the beach from 6:00pm. An evening to celebrate the week, the winners, and everything in between.</div></div>
+      <div class="day-card"><div class="day-number">Day 7 · Feb 5</div><div class="day-title">Departure</div><div class="day-desc">A final resort morning at your own pace, then departure transfers to Los Cabos Airport. Safe travels — and we'll see you next year.</div></div>
     </div>
   </div>
 </div>
@@ -281,7 +284,7 @@
     <div class="includes-grid">
       <div class="include-item">
         <svg class="include-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="22" height="16" rx="2"/><path d="M9 9V6a5 5 0 0110 0v3"/></svg>
-        <div class="include-title">6-Night All-Inclusive Stay</div>
+        <div class="include-title">7-Night All-Inclusive Stay</div>
         <div class="include-desc">Luxury accommodation at Pueblo Bonito Pacifica in your chosen room category, fully all-inclusive throughout.</div>
       </div>
       <div class="include-item">
@@ -317,7 +320,7 @@
 <div class="host" id="host">
   <div class="host-inner">
     <div>
-      <div class="section-eyebrow">Your Host</div>
+      <div class="section-eyebrow">Your Hosts</div>
       <h2 class="section-title light">Dan<br>O'Shaughnessy</h2>
       <p class="section-body light" style="margin-bottom:20px;">Dan O'Shaughnessy is a PGA of America Professional with over two decades of experience in competitive golf instruction and event hosting. His philosophy is simple: every golfer, regardless of handicap, deserves to experience elite competitive golf in an environment that feels welcoming, energising, and beautifully organised.</p>
       <p class="section-body light" style="margin-bottom:36px;">As the founder of the World Couples Golf Classic, Dan has spent three years building an event that blends serious competition with a genuinely luxurious travel experience. He'll be on hand throughout the week — running clinics, calling the tournament, and making sure you leave Los Cabos with both a great result and an even better story.</p>
@@ -326,6 +329,16 @@
         <div class="credential">Founder, World Couples Golf Classic (3 editions)</div>
         <div class="credential">20+ years in competitive golf instruction &amp; event hosting</div>
         <div class="credential">Tournament Director, Quivira Classic Series</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-eyebrow">&nbsp;</div>
+      <h2 class="section-title light">Rose<br>Rismanchi</h2>
+      <p class="section-body light" style="margin-bottom:20px;">Rose Rismanchi brings warmth, energy, and a passion for the game to every event she hosts. A natural connector and experienced tournament organiser, Rose ensures every couple feels at home from the moment they arrive in Los Cabos.</p>
+      <p class="section-body light" style="margin-bottom:36px;">Rose is the social heartbeat of the World Couples Golf Classic — coordinating welcome events, off-course activities, and the all-important closing gala. Her attention to detail and genuine enthusiasm for the couples golf experience makes her an indispensable part of the week.</p>
+      <div>
+        <div class="credential">Co-Host, World Couples Golf Classic</div>
+        <div class="credential">Tournament &amp; Events Coordinator</div>
       </div>
     </div>
   </div>
