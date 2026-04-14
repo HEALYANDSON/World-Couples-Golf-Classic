@@ -424,12 +424,6 @@
     </div>
     <div class="modal-body">
       <p class="modal-note">Complete the form below to register your interest in the World Couples Golf Classic 2027. A member of the golftours.com team will follow up within 24 hours to confirm availability and arrange your deposit.</p>
-      <!-- Replace this block with your HubSpot embed code -->
-      <div class="hs-placeholder">
-        <strong>HubSpot Form</strong>
-        Paste your HubSpot embed script here inside <code>.modal-body</code>.<br>
-        The selected room is passed as a pre-filled field via the modal title above.
-      </div>
       <div id="hsFormContainer"></div>
     </div>
   </div>
@@ -478,5 +472,73 @@ document.querySelectorAll('.day-card,.include-item,.room-card,.stat-item').forEa
   obs.observe(el);
 });
 </script>
+
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  function loadHubSpotForm() {
+    if (window.hbspt) {
+      document.getElementById('hsFormContainer').innerHTML = '';
+      hbspt.forms.create({
+        portalId: "2740562",
+        formId: "7a98f03f-813f-4971-b046-065e17068e4f",
+        region: "na1",
+        target: "#hsFormContainer"
+      });
+    } else {
+      setTimeout(loadHubSpotForm, 200);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', loadHubSpotForm);
+</script>
+
+<style>
+  /* HubSpot form overrides to match page style */
+  #hsFormContainer .hs-form fieldset { max-width: 100% !important; }
+  #hsFormContainer .hs-form .hs-input {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 1px solid #d0cdc8 !important;
+    border-radius: 0 !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 14px !important;
+    color: #1a1a18 !important;
+    background: #fff !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+  }
+  #hsFormContainer .hs-form .hs-input:focus {
+    border-color: #1B372F !important;
+  }
+  #hsFormContainer .hs-form label {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: .08em !important;
+    text-transform: uppercase !important;
+    color: #5a5a52 !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+  }
+  #hsFormContainer .hs-form .hs-form-field { margin-bottom: 20px !important; }
+  #hsFormContainer .hs-form .hs-button {
+    background: #C9A84C !important;
+    color: #142820 !important;
+    border: none !important;
+    padding: 14px 36px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: .14em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+  #hsFormContainer .hs-form .hs-button:hover { background: #d4b060 !important; }
+  #hsFormContainer .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 4px 0 0 !important; }
+  #hsFormContainer .hs-error-msgs li label { color: #c0392b !important; font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; }
+  #hsFormContainer .submitted-message { font-family: 'DM Sans', sans-serif !important; font-size: 15px !important; color: #1B372F !important; padding: 20px 0 !important; }
+</style>
 </body>
 </html>
