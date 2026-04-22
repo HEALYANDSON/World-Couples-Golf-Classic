@@ -192,31 +192,39 @@
 <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/2740562.js"></script>
 <!-- End of HubSpot Embed Code -->
 <script>
-  // Load HubSpot forms script, then init all 5 forms
-  (function() {
+  // Load HubSpot forms script once, render each form on first modal open
+  var hsFormsReady = false;
+  var hsFormMap = {
+    'modal-1': '7a98f03f-813f-4971-b046-065e17068e4f',
+    'modal-2': 'e533dfb3-46de-4d68-b636-379c9c1e06a0',
+    'modal-3': 'd5a0ba9b-0970-4c80-90bb-6b0e3364f90a',
+    'modal-4': 'b55eff3a-9c09-4af3-a65b-a34a69c3f440',
+    'modal-5': 'fd229946-fe03-4395-b48b-280cfded8600'
+  };
+  var hsFormsRendered = {};
+
+  function loadHsScript(callback) {
+    if (hsFormsReady) { callback(); return; }
     var s = document.createElement('script');
     s.src = 'https://js.hsforms.net/forms/embed/v2.js';
     s.charset = 'utf-8';
     s.type = 'text/javascript';
-    s.onload = function() {
-      var forms = [
-        { id: '#hs-modal-1', formId: '7a98f03f-813f-4971-b046-065e17068e4f' },
-        { id: '#hs-modal-2', formId: 'e533dfb3-46de-4d68-b636-379c9c1e06a0' },
-        { id: '#hs-modal-3', formId: 'd5a0ba9b-0970-4c80-90bb-6b0e3364f90a' },
-        { id: '#hs-modal-4', formId: 'b55eff3a-9c09-4af3-a65b-a34a69c3f440' },
-        { id: '#hs-modal-5', formId: 'fd229946-fe03-4395-b48b-280cfded8600' }
-      ];
-      forms.forEach(function(f) {
-        hbspt.forms.create({
-          portalId: '2740562',
-          formId: f.formId,
-          region: 'na1',
-          target: f.id
-        });
-      });
-    };
+    s.onload = function() { hsFormsReady = true; callback(); };
     document.head.appendChild(s);
-  })();
+  }
+
+  function renderHsForm(modalId) {
+    if (hsFormsRendered[modalId]) return;
+    var formId = hsFormMap[modalId];
+    if (!formId) return;
+    hsFormsRendered[modalId] = true;
+    hbspt.forms.create({
+      portalId: '2740562',
+      formId: formId,
+      region: 'na1',
+      target: '#hs-' + modalId
+    });
+  }
 </script>
 </head>
 <body>
@@ -587,6 +595,7 @@
 function openModal(id) {
   document.getElementById(id).classList.add('open');
   document.body.style.overflow = 'hidden';
+  loadHsScript(function() { renderHsForm(id); });
 }
 function closeModal(id) {
   document.getElementById(id).classList.remove('open');
