@@ -658,10 +658,10 @@ function loadHsForm(modalId) {
 
 <style>
   /* HubSpot form overrides — matched to WCGC2027 page style */
-  #hsFormContainer { font-family: 'DM Sans', sans-serif; }
-  #hsFormContainer .hs-form fieldset { max-width: 100% !important; border: none !important; padding: 0 !important; margin: 0 0 4px !important; }
-  #hsFormContainer .hs-form-field { margin-bottom: 20px !important; }
-  #hsFormContainer .hs-form-field > label {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 { font-family: 'DM Sans', sans-serif; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form fieldset { max-width: 100% !important; border: none !important; padding: 0 !important; margin: 0 0 4px !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form-field { margin-bottom: 20px !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form-field > label {
     display: block !important;
     font-family: 'DM Sans', sans-serif !important;
     font-size: 10px !important;
@@ -671,14 +671,14 @@ function loadHsForm(modalId) {
     color: #5a5a52 !important;
     margin-bottom: 7px !important;
   }
-  #hsFormContainer .hs-form-field > label .hs-form-required { color: #C9A84C !important; }
-  #hsFormContainer .hs-input:not([type="checkbox"]):not([type="radio"]),
-  #hsFormContainer input[type="text"],
-  #hsFormContainer input[type="email"],
-  #hsFormContainer input[type="tel"],
-  #hsFormContainer input[type="number"],
-  #hsFormContainer select,
-  #hsFormContainer textarea {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form-field > label .hs-form-required { color: #C9A84C !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-input:not([type="checkbox"]):not([type="radio"]),
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="text"],
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="email"],
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="tel"],
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="number"],
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 select,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 textarea {
     width: 100% !important;
     padding: 12px 16px !important;
     border: 1px solid #d0cdc8 !important;
@@ -694,24 +694,24 @@ function loadHsForm(modalId) {
     -webkit-appearance: none !important;
     transition: border-color .2s !important;
   }
-  #hsFormContainer .hs-input:focus,
-  #hsFormContainer input:focus,
-  #hsFormContainer select:focus,
-  #hsFormContainer textarea:focus {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-input:focus,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input:focus,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 select:focus,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 textarea:focus {
     border-color: #1B372F !important;
     background: #fff !important;
   }
-  #hsFormContainer textarea { min-height: 100px !important; resize: vertical !important; }
-  #hsFormContainer .hs-fieldtype-select select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5a52' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-position: right 14px center !important; padding-right: 36px !important; }
-  #hsFormContainer .inputs-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-  #hsFormContainer .inputs-list li { margin-bottom: 8px !important; }
-  #hsFormContainer .inputs-list label { font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0 !important; text-transform: none !important; color: #1a1a18 !important; display: flex !important; align-items: center !important; gap: 8px !important; cursor: pointer !important; }
-  #hsFormContainer .hs-form-checkbox-display input,
-  #hsFormContainer .hs-form-radio-display input,
-  #hsFormContainer input[type="checkbox"],
-  #hsFormContainer input[type="radio"] { width: 16px !important; height: 16px !important; min-width: 16px !important; padding: 0 !important; accent-color: #1B372F !important; cursor: pointer !important; }
-  #hsFormContainer .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
-  #hsFormContainer .hs-error-msgs li label {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 textarea { min-height: 100px !important; resize: vertical !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-fieldtype-select select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5a52' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-position: right 14px center !important; padding-right: 36px !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .inputs-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .inputs-list li { margin-bottom: 8px !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .inputs-list label { font-size: 13px !important; font-weight: 300 !important; letter-spacing: 0 !important; text-transform: none !important; color: #1a1a18 !important; display: flex !important; align-items: center !important; gap: 8px !important; cursor: pointer !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form-checkbox-display input,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-form-radio-display input,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="checkbox"],
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="radio"] { width: 16px !important; height: 16px !important; min-width: 16px !important; padding: 0 !important; accent-color: #1B372F !important; cursor: pointer !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-error-msgs { list-style: none !important; padding: 0 !important; margin: 6px 0 0 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-error-msgs li label {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 11px !important;
     color: #b94040 !important;
@@ -719,9 +719,9 @@ function loadHsForm(modalId) {
     letter-spacing: 0 !important;
     font-weight: 400 !important;
   }
-  #hsFormContainer .hs_submit { margin-top: 8px !important; }
-  #hsFormContainer .hs-button,
-  #hsFormContainer input[type="submit"] {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs_submit { margin-top: 8px !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-button,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="submit"] {
     width: 100% !important;
     background: #C9A84C !important;
     color: #142820 !important;
@@ -736,9 +736,9 @@ function loadHsForm(modalId) {
     cursor: pointer !important;
     transition: background .2s !important;
   }
-  #hsFormContainer .hs-button:hover,
-  #hsFormContainer input[type="submit"]:hover { background: #d4b462 !important; }
-  #hsFormContainer .submitted-message {
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-button:hover,
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 input[type="submit"]:hover { background: #d4b462 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .submitted-message {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 15px !important;
     font-weight: 300 !important;
@@ -746,9 +746,9 @@ function loadHsForm(modalId) {
     line-height: 1.7 !important;
     padding: 24px 0 8px !important;
   }
-  #hsFormContainer .hs-richtext { font-size: 13px !important; color: #5a5a52 !important; margin-bottom: 16px !important; line-height: 1.6 !important; }
-  #hsFormContainer .legal-consent-container { font-size: 11px !important; color: #5a5a52 !important; line-height: 1.6 !important; }
-  #hsFormContainer .legal-consent-container .hs-form-booleancheckbox-display label { font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; color: #5a5a52 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .hs-richtext { font-size: 13px !important; color: #5a5a52 !important; margin-bottom: 16px !important; line-height: 1.6 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .legal-consent-container { font-size: 11px !important; color: #5a5a52 !important; line-height: 1.6 !important; }
+  #hs-modal-1,#hs-modal-2,#hs-modal-3,#hs-modal-4,#hs-modal-5 .legal-consent-container .hs-form-booleancheckbox-display label { font-size: 11px !important; text-transform: none !important; letter-spacing: 0 !important; color: #5a5a52 !important; }
 </style>
 </body>
 </html>
