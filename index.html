@@ -468,7 +468,7 @@
           <div class="price-main">$6,635</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$480</strong> / night</div>
-          <a href="javascript:void(0)" class="room-btn" onclick="openModal('modal-1')">Register Interest</a>
+          <button class="room-btn" onclick="openModal(event,\'modal-1\')">Register Interest</button>
         </div>
         <div class="room-card">
           <div class="room-tier">Suite</div>
@@ -477,7 +477,7 @@
           <div class="price-main">$7,345</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$590</strong> / night</div>
-          <a href="javascript:void(0)" class="room-btn" onclick="openModal('modal-2')">Register Interest</a>
+          <button class="room-btn" onclick="openModal(event,\'modal-2\')">Register Interest</button>
         </div>
         <div class="room-card featured">
           <div class="room-tier">Premium Suite</div>
@@ -486,7 +486,7 @@
           <div class="price-main">$7,695</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$650</strong> / night</div>
-          <a href="javascript:void(0)" class="room-btn" onclick="openModal('modal-3')">Register Interest</a>
+          <button class="room-btn" onclick="openModal(event,\'modal-3\')">Register Interest</button>
         </div>
       </div>
     </div>
@@ -501,7 +501,7 @@
           <div class="price-main">$7,525</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$620</strong> / night</div>
-          <a href="javascript:void(0)" class="room-btn outline" onclick="openModal('modal-4')">Register Interest</a>
+          <button class="room-btn outline" onclick="openModal(event,\'modal-4\')">Register Interest</button>
         </div>
         <div class="room-card">
           <div class="room-tier">Towers · Suite</div>
@@ -510,7 +510,7 @@
           <div class="price-main">$8,915</div>
           <div class="price-per">per couple · 6 nights</div>
           <div class="price-extra">Additional nights from <strong>$835</strong> / night</div>
-          <a href="javascript:void(0)" class="room-btn outline" onclick="openModal('modal-5')">Register Interest</a>
+          <button class="room-btn outline" onclick="openModal(event,\'modal-5\')">Register Interest</button>
         </div>
       </div>
     </div>
@@ -599,8 +599,7 @@
 </footer>
 
 <script>
-function openModal(id) {
-  event && event.preventDefault();
+function openModal(e, id) {
   document.getElementById(id).classList.add('open');
   document.body.style.overflow = 'hidden';
   loadHsScript(id);
